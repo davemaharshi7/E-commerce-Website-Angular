@@ -1,0 +1,280 @@
+<nav class="navbar navbar-expand-md navbar-light  ">
+    
+  <a class="navbar-brand " href="/home">
+    <img src="assets/img/go_shop.png" class="img-fluid" width="100" height="40" class="d-inline-block align-top" alt="GoSHOP"> 
+  </a>        
+
+<!-- FOR TOGGLE BUTTON -->
+<button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleCollapsed()">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="container-fluid">
+<!-- <div class="row m-0 p-0"> -->
+    
+  <div class="col-lg-8 ">
+      <form class="form-inline text-center">
+          <div class="input-group collapse navbar-collapse " id="navbarSupportedContent">
+            <button class="btn btn-outline-dark" type="button" id="button-addon2"><i class="fa fa-search"></i></button>  
+            <input type="text" class="form-control search_input" type="search" placeholder="Search" aria-label="Search Field" aria-describedby="button-addon2">
+              
+          </div> 
+      </form>
+  </div>
+
+  <!-- data-toggle="modal" data-target="#LoginModal" (click)="open()" -->
+ 
+  <div class="col-lg-4 collapse navbar-collapse text-center" id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+          <ul class="navbar-nav">
+              
+                <li ngbDropdown  class="nav-item dropdown" >
+                  <a ngbDropdownToggle class="nav-link dropdown-toggle"   id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Account
+                  </a>
+                  <div ngbDropdownMenu  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" routerLink="/login"  >Login</a>
+                    <a class="dropdown-item" routerLink="/signup">Sign Up</a>
+  
+                  </div>
+                </li>
+
+                <li ngbDropdown  class="nav-item dropdown" >
+                    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     More
+                    </a>
+                    <div ngbDropdownMenu  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Advertise</a>
+                      <a class="dropdown-item" href="#">Customer Support</a>
+    
+                    </div>
+                  </li>
+            <li class="nav-item ml-sm-4">
+                <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i>Cart</a>
+            </li>
+          </ul>
+</div>
+<!-- </div> -->
+<!-- <a class="navbar-brand ml-sm-5" href="#">BUY iT</a> -->
+</div>
+</nav>
+
+<!-- LOgin MOdal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" role="dialog"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header ">
+          <img src="assets/img/go_shop.png" width="100" height="40" class="d-inline-block align-top" alt="GoSHOP"> 
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body back_modal">
+          <div class="container ">
+              <div class="row">
+                  <div class="col ">
+                      <form>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                          </div>
+                          <div class="form-group pass_show">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <!-- <span class="ptxt">Show</span> -->
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                  </div>
+              </div>
+              <div class="col pt-3 px-1">
+                <p class="lead text-center">OR</p>
+                  <button type="submit" class="btn btn-dark btn-lg px-3 my-1">Sign Up </button> 
+                  <button type="submit" class="btn btn-danger btn-lg px-3 my-1">Login with  <i class="fa fa-google-plus-g"></i></button>
+                  <button type="submit" class="btn btn-primary btn-lg px-3 my-1">Login with  <i class="fa fa-facebook-f"></i></button>
+
+      
+              </div>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Category BAR -->
+<div class="navbar1">
+  <a routerLink="/home">Home</a>
+  <a routerLink="/home">What's New</a>
+  <div class="dropdown1">
+    <button class="dropbtn">Clothing 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content1">
+      <div class="container-fluid">
+        <div class="row header">
+          <div class="col">
+            <h2>Clothing</h2>
+          </div>
+        </div>
+      
+      <div class="row last_row">
+        <div class="col-sm-4 links">
+          <h3>Mens Wear</h3>
+          <a href="#">Tshirt</a>
+          <a href="#">Jackets</a>
+          <a href="#">Trouser</a>
+        </div>
+        <div class="col-sm-4 links">
+          <h3>Women</h3>
+          <a href="#">Tshirt</a>
+          <a href="#">Jackets</a>
+          <a href="#">Trouser</a>
+        </div>
+        <div class="col-sm-4 links">
+            <img src="assets/img/cloth1.jpg" alt="img cloth" class="img-fluid">
+          </div>
+      </div>
+    </div> 
+    </div>
+  </div> 
+
+  <div class="dropdown1">
+      <button class="dropbtn">Electronics 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content1">
+        <div class="container-fluid">
+          <div class="row header">
+            <div class="col">
+              <h2>Electronics</h2>
+            </div>
+          </div>
+        
+        <div class="row last_row">
+          <div class="col-sm-4 links">
+            <h3>Mens Wear</h3>
+            <a href="#">Tshirt</a>
+            <a href="#">Jackets</a>
+            <a href="#">Trouser</a>
+          </div>
+          <div class="col-sm-4 links">
+            <h3>Women</h3>
+            <a href="#">Tshirt</a>
+            <a href="#">Jackets</a>
+            <a href="#">Trouser</a>
+          </div>
+          <div class="col-sm-4 links">
+              <img src="assets/img/elect.png" alt="img cloth" class="img-fluid">
+            </div>
+        </div>
+      </div> 
+      </div>
+    </div> 
+  
+  <div class="dropdown1">
+        <button class="dropbtn">Home & Furniture 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content1">
+          <div class="container-fluid">
+            <div class="row header">
+              <div class="col">
+                <h2>Home & Furniture</h2>
+              </div>
+            </div>
+          
+          <div class="row last_row">
+            <div class="col-sm-4 links">
+              <h3>Mens Wear</h3>
+              <a href="#">Tshirt</a>
+              <a href="#">Jackets</a>
+              <a href="#">Trouser</a>
+            </div>
+            <div class="col-sm-4 links">
+              <h3>Women</h3>
+              <a href="#">Tshirt</a>
+              <a href="#">Jackets</a>
+              <a href="#">Trouser</a>
+            </div>
+            <div class="col-sm-4 links">
+                <img src="assets/img/furniture.jpeg" alt="img cloth" class="img-fluid">
+              </div>
+          </div>
+        </div> 
+        </div>
+    </div> 
+  
+  <div class="dropdown1">
+        <button class="dropbtn">TV & Appliances 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content1">
+          <div class="container-fluid">
+            <div class="row header">
+              <div class="col">
+                <h2>TV & Appliances</h2>
+              </div>
+            </div>
+          
+          <div class="row last_row">
+            <div class="col-sm-4 links">
+              <h3>Mens Wear</h3>
+              <a href="#">Tshirt</a>
+              <a href="#">Jackets</a>
+              <a href="#">Trouser</a>
+            </div>
+            <div class="col-sm-4 links">
+              <h3>Women</h3>
+              <a href="#">Tshirt</a>
+              <a href="#">Jackets</a>
+              <a href="#">Trouser</a>
+            </div>
+            <div class="col-sm-4 links">
+                <img src="assets/img/tv.png" alt="img cloth" class="img-fluid">
+              </div>
+          </div>
+        </div> 
+        </div>
+    </div>   
+  
+  <div class="dropdown1">
+        <button class="dropbtn">Sports 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content1">
+          <div class="container-fluid">
+            <div class="row header">
+              <div class="col">
+                <h2>Sports</h2>
+              </div>
+            </div>
+          
+          <div class="row last_row">
+            <div class="col-sm-4 links">
+              <h3>Mens Wear</h3>
+              <a href="#">Tshirt</a>
+              <a href="#">Jackets</a>
+              <a href="#">Trouser</a>
+            </div>
+            <div class="col-sm-4 links">
+              <h3>Women</h3>
+              <a href="#">Tshirt</a>
+              <a href="#">Jackets</a>
+              <a href="#">Trouser</a>
+            </div>
+            <div class="col-sm-4 links">
+                <img src="assets/img/sports-image.png" alt="img cloth" class="img-fluid">
+              </div>
+          </div>
+        </div> 
+        </div>
+    </div>
+  
+  <a href="#">Offer Zone</a>
+
+</div>
