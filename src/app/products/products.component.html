@@ -4,27 +4,25 @@
   
 
 <div class="row">
-  <div class="col-3">
+  <!-- <div class="col-3">
     <div class="list-group">
       <a href="#" class="list-group-item list-group-item-action">Clothing</a>
       <a href="#" class="list-group-item list-group-item-action">Electronics</a>
       <a href="#" class="list-group-item list-group-item-action">Home & Furniture</a>
       <a href="#" class="list-group-item list-group-item-action">Sports</a>
       <a href="#" class="list-group-item list-group-item-action">GOSHOP Custom</a>
-
-
     </div>
-  </div>
+  </div> -->
 
   <div class="col">
     <h3>Our Products</h3>
     <div class="row">
       <ng-container *ngFor="let p of prods;let i = index">
         <div class="col">
-          <div class="card" style="width: 19rem;">
-            <img class="card-img-top" [src]="p.imageurl" class="img-fluid img-thumbnail" height="400px" alt="Card image cap">
+          <div class="card" style="width: 18rem;  ">
+           <a routerLink="/product/{{p.id}}"><img class="card-img-top" [src]="p.imageurl[0]" class="img-fluid img-thumbnail" height="400px" alt="Card image cap"></a>
             <div class="card-body">
-              <h5 class="card-title">{{ p.name }}</h5>
+              <h5 class="card-title"><a routerLink="/product/{{p.id}}">{{ p.name }}</a></h5>
               <p class="card-text">{{ p.price | currency:'INR':true }} 
                   <span *ngIf="p.stock>0" class="badge badge-success">In Stock</span>
                   <span *ngIf="p.stock==0" class="badge badge-danger">Out of Stock</span>
@@ -40,3 +38,4 @@
   </div>
 </div>
 </div>
+<go-footer></go-footer>

@@ -1,0 +1,75 @@
+<go-navbar></go-navbar>
+
+<div class="container-fluid py-2 ad_cover">
+  <div class="container ">
+    <div class="row">
+      <!-- Left Side -->
+      <div class="col-sm-8">
+        <div class="container">
+          <!-- Main Image display -->
+          <div class="imgBox"><img [src]="p.imageurl[0]" alt="main image"  class="img-fluid" ></div>
+          <!-- Small Thumbnails -->
+          <ul class="thumb">
+              <li><a href="{{p.imageurl[0]}}" target="imgBox"><img [src]="p.imageurl[0]" width="50px" height="50px" alt=""></a></li>
+              <li><a href="{{p.imageurl[1]}}" target="imgBox"><img [src]="p.imageurl[1]" width="50px" height="50px" alt=""></a></li>
+              <li><a href="{{p.imageurl[2]}}" target="imgBox"><img [src]="p.imageurl[2]" width="50px" height="50px" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="col-sm-4">
+          <div class="product-description">
+              <span class="name">{{ p.category }}</span>
+              <h1>{{ p.name }}</h1>
+              <span class="badge badge-info">New</span>
+              <span class="badge badge-success">OFFER</span>
+              <p class="pt-1">{{p.description}}</p>
+            </div>
+    
+            <!-- Product Configuration -->
+            <div class="product-configuration">
+    
+              <!-- Product Color -->
+              <div class="product-configuration-title">
+                <span>Color</span>
+    
+                <div class="color-choose">
+                  <div>
+                    <input data-image="red" type="radio" id="red" name="color" value="red" checked>
+                    <label for="red"><span></span></label>
+                  </div>
+                  <div>
+                    <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+                    <label for="blue"><span></span></label>
+                  </div>
+                  <div>
+                    <input data-image="black" type="radio" id="black" name="color" value="black">
+                    <label for="black"><span></span></label>
+                  </div>
+                </div>
+    
+              
+    
+              <!-- Cable Configuration -->
+              
+                <span>Delivery Options</span>
+                
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-secondary">Normal Delivery-FREE</button>
+                  <button type="button" class="btn btn-secondary">Fast Delivery-Paid</button>
+                </div>
+              </div>
+            
+    
+            <!-- Product Pricing -->
+            <div class="product-price pb-1">
+              <span>{{p.price | currency:'INR'}}</span>
+            </div>
+            <button class="btn btn-success btn-lg" [class.disabled]="p.stock==0">Add to Cart</button>
+      </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<go-footer></go-footer>

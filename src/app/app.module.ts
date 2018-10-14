@@ -9,6 +9,10 @@ import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { SignupComponent } from './signup/signup.component';
+import { SingleProductComponent } from './single-product/single-product.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,16 +21,20 @@ import { SignupComponent } from './signup/signup.component';
     IndexComponent,
     LoginComponent,
     ProductsComponent,
-    SignupComponent
+    SignupComponent,
+    SingleProductComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
       {path:'',component:IndexComponent},
       {path:'home',component:HomeComponent},
       {path:'login',component:LoginComponent},
       {path:'products',component:ProductsComponent},
+      {path:'product/:id',component:SingleProductComponent},
       {path:'signup',component:SignupComponent}
     ])
     

@@ -1,0 +1,158 @@
+/* For IMAGES */
+ul.thumb {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333333; */
+}
+ul.thumb li {
+  /* margin:10px; */
+  float: left;
+  border: 1px solid rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+ul.thumb li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+.imgBox{
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* for Background */
+.ad_cover{
+    background:  #ccffff  ;
+ 
+ }
+
+/* Right Column */
+.product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .product-description .name {
+    font-size: 12px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    color: #43484D;
+    letter-spacing: -2px;
+  }
+  .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+  }
+  
+  /* Product Configuration */
+  .product-configuration-title span,
+  .cable-config span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #86939E;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  /* Product Color */
+  .product-configuration-title {
+    margin-bottom: 30px;
+  }
+  
+  .color-choose div {
+    display: inline-block;
+  }
+  
+  .color-choose input[type="radio"] {
+    display: none;
+  }
+  
+  .color-choose input[type="radio"] + label span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .color-choose input[type="radio"] + label span {
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+  }
+  
+  .color-choose input[type="radio"]#red + label span {
+    background-color: #C91524;
+  }
+  .color-choose input[type="radio"]#blue + label span {
+    background-color: #314780;
+  }
+  .color-choose input[type="radio"]#black + label span {
+    background-color: #323232;
+  }
+  
+  .color-choose input[type="radio"]:checked + label span {
+    background-image: url('/assets/img/products/check-icn.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Cable Configuration */
+  .cable-choose {
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  /* Product Price */
+  .product-price {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-price span {
+    font-size: 26px;
+    font-weight: 300;
+    color: #43474D;
+    margin-right: 20px;
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 940px) {
+    .container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+  
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+  
+    .left-column img {
+      width: 300px;
+      right: 0;
+      top: -65px;
+      left: initial;
+    }
+  }
+  
+  @media (max-width: 535px) {
+    .left-column img {
+      width: 220px;
+      top: -85px;
+    }
+  }
+  

@@ -2,8 +2,19 @@
 <div class="wrapper container-fluid">
   <form class="form-signin">       
     <h2 class="form-signin-heading">Please login</h2>
-    <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-    <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+    <input type="text" class="form-control" #u="ngModel"  ngModel name="username" placeholder="Email Address" required  minlength="3"/>
+    <div class="alert alert-danger" *ngIf="u.touched && !u.valid">
+
+      <div *ngIf="u.errors.required">Email Required</div>
+      <div *ngIf="u.errors.minlength">Email of minimum {{u.errors.minlength.requiredLength}} character Required</div>
+
+    </div>
+    <input type="password" class="form-control" #p="ngModel" ngModel name="password" placeholder="Password" required />
+    <div class="alert alert-danger" *ngIf="p.touched && !p.valid">
+
+        <div *ngIf="p.errors.required">Password Required</div>
+  
+      </div>      
     <label class="checkbox">
       <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
     </label>
@@ -11,7 +22,8 @@
     <hr>
   <button class="btn btn-danger">Login With <i class="fa fa-google"></i></button> &nbsp;
   <button class="btn btn-primary">Login With <i class="fa fa-facebook-f"></i></button> 
-
+    <hr>
+    <p>Don't have Account,Signup <a routerLink="/signup">Here</a></p>
   </form>
   
 </div>

@@ -1,0 +1,15 @@
+.scrollup{
+    display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 5px 3px;
+    background: rgb(66, 62, 62);
+    color: #fff;
+}

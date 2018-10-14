@@ -1,16 +1,41 @@
 <go-navbar></go-navbar>
 <div class="wrapper container-fluid">
-  <form class="form-signin">       
+  <form class="form-signin" #f="ngForm">       
     <h2 class="form-signin-heading">Create an Account</h2>
-    <input type="text" class="form-control" name="name" placeholder="Name" required="" autofocus="" />
-    <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-    <input type="password" class="form-control" name="password" placeholder="Password" required=""/>  
-    <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password" required=""/>      
+    <input type="text" class="form-control" name="name" #n="ngModel" ngModel placeholder="Full Name" required minlength="4" maxlength="15"/>
+    <div class="alert alert-danger" *ngIf="n.touched && !n.valid">
 
+        <div *ngIf="n.errors.required">Name Required</div>
+        <div *ngIf="n.errors.minlength">Name of minimum {{n.errors.minlength.requiredLength}} character Required</div>
+        <div *ngIf="n.errors.maxlength">Name of maximum {{n.errors.maxlength.requiredLength}} character Required</div>
+  
+      </div>
+    <input type="email" class="form-control" ngModel #u="ngModel" name="username" placeholder="Email Address" required minlength="4" />
+    <div class="alert alert-danger" *ngIf="u.touched && !u.valid">
+
+        <div *ngIf="u.errors.required">Email Required</div>
+        <div *ngIf="u.errors.minlength">Email of minimum {{u.errors.minlength.requiredLength}} character Required</div>
+  
+      </div>
+   
+    <input type="password" class="form-control" name="password" placeholder="Password" required=""/>  
+    <div class="alert alert-danger" *ngIf="n.touched && !n.valid">
+
+        <div *ngIf="n.errors.required">Password Required</div>
+       
+      </div>
+   
+    <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password" required=""/>      
+    <div class="alert alert-danger" *ngIf="n.touched && !n.valid">
+
+        <div *ngIf="n.errors.required">Password Required</div>
+      
+      </div>
+   
     <label class="checkbox">
       <input type="checkbox" value="Agree T&C's" id="T&C" name="terms"> By Signing up you agree to the Terms & Conditions.
     </label>
-    <button class="btn btn-lg btn-success btn-block" type="submit">Sign Up</button>  
+    <button class="btn btn-lg btn-success btn-block" [class.disabled]="!f.valid" type="submit">Sign Up</button>  
     <hr>
   <p>Already have Account,<a routerLink="/login">Sign In</a></p> 
 

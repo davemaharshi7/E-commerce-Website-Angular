@@ -1,4 +1,5 @@
 <go-navbar></go-navbar>
+
 <!-- carousel  -->
 <ngb-carousel>
   <ng-template ngbSlide>
@@ -72,16 +73,30 @@
 </div>
 </div>
 
+<!-- Advertise Banner-2 -->
+<div class="container-fluid ad_cover p-3 ">
+
+  <div class="container">
+  <img src="assets/img/laptopbanner.jpg" alt="Advertise" class="img-thumbnail" >
+  <!-- <img src="/img/ad33.jpg" alt="Advertise" class="img-thumbnail" > -->
+</div>
+</div>
+
 <!-- Special buttons over Image -->
-<div class="container-fluid ad_cover  pt-2">
-
-  <img src="assets/img/new/Summersal_custom.jpg" alt="sale_sale" class="img-fluid" >
-  <div class="overlay">
-      <button class="btn btn-dark img_btn">SHOP MEN's</button>&nbsp;
-      <button class="btn btn-dark img_btn">SHOP Women's</button>&nbsp;
-      <button class="btn btn-dark img_btn">SHOP Accesories</button>
-
-    </div>
+<div class="container-fluid ad_cover  pt-2 img_container">
+  <div class=" ad_cover_buttons ">
+      <div class="container overlay">
+      <div class="mensbutton">
+        <button class="btn btn-dark btn-lg img_btn">SHOP MEN's</button>
+      </div>  
+      <div class="womensbutton">
+        <button class="btn btn-dark btn-lg img_btn">SHOP Accesories</button>
+      </div>  
+      <div class="accsbutton">
+        <button class="btn btn-dark btn-lg img_btn">SHOP Women's</button>
+      </div>  
+  </div>
+</div>
 </div>
 
 <!-- Products started -->
@@ -91,7 +106,7 @@
     <div class="row">
       <div class="col-sm-4 ">
         <div class="card m-auto" >
-          <img class="card-img-top" src="assets/img/laptop-1.jpg"  alt="Card image cap" class="img-thumbnail" height="250px" width="250px">
+          <img class="card-img-top" src="assets/img/laptop-1.jpg"  alt="Card image cap" class="img-thumbnail" height="250px" >
           <div class="card-body">
             <h5 class="card-title">Hp Au-111-tx</h5>
             <p class="card-text ">Its integrated with most powerfull Cpu and Hardware.</p>
@@ -102,7 +117,7 @@
     
     <div class="col-sm-4">
       <div class="card m-auto" >
-          <img class="card-img-top" src="assets/img/apple2.jpg"  class="img-thumbnail" alt="Card image cap" height="250px" width="250px">
+          <img class="card-img-top" src="assets/img/apple2.jpg"  class="img-thumbnail" alt="Card image cap" height="250px" >
           <div class="card-body" >
             <h5 class="card-title">Apple Watch Series 3 GPS </h5>
             <p class="card-text ">42 mm Space Grey Aluminium Case with Grey Sport Band  (Grey Strap Regular)</p>
@@ -113,7 +128,7 @@
 
     <div class="col-sm-4">
         <div class="card m-auto" >
-            <img class="card-img-top" src="assets/img/tvproduct.jpg"  class="img-thumbnail" alt="Card image cap" height="250px" width="250px">
+            <img class="card-img-top" src="assets/img/tvproduct.jpg"  class="img-thumbnail" alt="Card image cap" height="250px" >
             <div class="card-body" >
               <h5 class="card-title">4K UHD TV </h5>
               <p class="card-text ">SONY BRAVIA 55 inches Black color</p>
@@ -125,42 +140,5 @@
   </div>
 </div>
 
+<go-footer></go-footer>
 
-
-<!-- Footer Section -->
-  <div class="container-fluid footer pt-10">
-    
-    <div class="row p-5">
-      <div class="col-4">
-        <p class="lead"> ABOUT</p>
-        <p><a href="#">Contact Us</a></p>
-        <p ><a href="#">About Us</a></p>
-        <p ><a href="#">Press</a></p>
-
-      </div>
-      <div class="col-4">
-        <p class="lead">HELP</p>
-        <p ><a href="#">Payment</a></p>
-        <p ><a href="#">Shipping</a></p>
-        <p ><a href="#">Returns & Cancellation</a></p>
-      </div>
-      <div class="col-4">
-        <p class="lead">Registered Office Address</p>
-        <p > GoSHOP
-            Ahmedabad,
-            Gujarat - 560034
-            India</p>
-      </div>
-      <div class="row ">
-        <div class="col text-center">
-        <p>
-          <a href="#"><i class="fa fa-instagram"></i></a> &nbsp;
-          <a href="#"><i class="fa fa-facebook-f"></i></a> &nbsp;
-          <a href="#"><i class="fa fa-twitter"></i></a>
-        </p>
-        <p>&copy;2018-19 GOSHOP</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
