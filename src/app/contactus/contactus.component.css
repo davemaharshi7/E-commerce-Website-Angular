@@ -1,0 +1,6 @@
+.back_img{
+    background-image: url('/assets/img/bg_1.jpg'); 
+    background-size: cover;
+  height: 200vh !important;
+  max-width: 100%;
+}

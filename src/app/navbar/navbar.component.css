@@ -40,6 +40,7 @@
     margin: 0;
 }
 
+
 .navbar1 a:hover, .dropdown1:hover .dropbtn {
     background-color:#5489bb;
     color: #000;
@@ -68,7 +69,15 @@
 }
 
 /* Create three equal columns that floats next to each other */
+.category h2{
+    text-decoration:none;
+    color: #000;
+}
+a.category:hover{
+    background-color:#ddd;
 
+
+}
 .links a {
     float: none;
     color: black;

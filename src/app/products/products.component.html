@@ -16,11 +16,15 @@
 
   <div class="col">
     <h3>Our Products</h3>
+    <p>
+      <input (keyup)="filterQ(query.value)" #query
+      type="text" class="form-control" placeholder="Search...">
+    </p>
     <div class="row">
-      <ng-container *ngFor="let p of prods;let i = index">
+      <ng-container *ngFor="let p of filterd;let i = index">
         <div class="col">
           <div class="card" style="width: 18rem;  ">
-           <a routerLink="/product/{{p.id}}"><img class="card-img-top" [src]="p.imageurl[0]" class="img-fluid img-thumbnail" height="400px" alt="Card image cap"></a>
+           <a routerLink="/product/{{p.id}}"><img class="card-img-top" [src]="p.imageurl[0]" class="img-thumbnail" height="450px" alt="Card image cap"></a>
             <div class="card-body">
               <h5 class="card-title"><a routerLink="/product/{{p.id}}">{{ p.name }}</a></h5>
               <p class="card-text">{{ p.price | currency:'INR':true }} 
@@ -34,6 +38,9 @@
         </div>
         <div *ngIf="(i+1)%2===0" class="w-100" ><br></div>
       </ng-container>
+      <div *ngIf="filterd.length == 0">
+        <p>Sorry, NO PRODUCTS FOUND!!</p>
+      </div>
     </div>
   </div>
 </div>

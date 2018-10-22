@@ -12,6 +12,8 @@ import { SignupComponent } from './signup/signup.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     SignupComponent,
     SingleProductComponent,
-    FooterComponent
+    FooterComponent,
+    ContactusComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,10 @@ import { FormsModule } from '@angular/forms';
       {path:'login',component:LoginComponent},
       {path:'products',component:ProductsComponent},
       {path:'product/:id',component:SingleProductComponent},
-      {path:'signup',component:SignupComponent}
+      {path:'signup',component:SignupComponent},
+      {path:'contactus',component:ContactusComponent},
+      {path:'about',component:AboutusComponent}
+
     ])
     
   ],

@@ -16,8 +16,7 @@
       <form class="form-inline text-center">
           <div class="input-group collapse navbar-collapse " id="navbarSupportedContent">
             <button class="btn btn-outline-dark" type="button" id="button-addon2"><i class="fa fa-search"></i></button>  
-            <input type="text" #query (keyup)="filter(query.value)"
-             class="form-control search_input" type="search" placeholder="Search" aria-label="Search Field" aria-describedby="button-addon2">
+            <input type="text" class="form-control search_input" type="search" placeholder="Search" aria-label="Search Field" aria-describedby="button-addon2">
               
           </div> 
       </form>
@@ -44,6 +43,8 @@
                      More
                     </a>
                     <div ngbDropdownMenu  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" routerLink="/contactus">Contact Us</a>
+                      <a class="dropdown-item" routerLink="/about">About Us</a>
                       <a class="dropdown-item" href="#">Advertise</a>
                       <a class="dropdown-item" href="#">Customer Support</a>
     
@@ -65,6 +66,7 @@
 <div class="navbar1">
   <a routerLink="/home">Home</a>
   <a routerLink="/home">What's New</a>
+  <!-- Clothing -->
   <div class="dropdown1">
     <button class="dropbtn">Clothing 
       <i class="fa fa-caret-down"></i>
@@ -73,7 +75,7 @@
       <div class="container-fluid">
         <div class="row header">
           <div class="col">
-            <h2>Clothing</h2>
+            <a class="category" target="_blank" routerLink="/products" [queryParams]="{category : 'clothing'}"><h2>Clothing </h2></a>
           </div>
         </div>
       
@@ -97,7 +99,7 @@
     </div> 
     </div>
   </div> 
-
+<!-- Electronics -->
   <div class="dropdown1">
       <button class="dropbtn">Electronics 
         <i class="fa fa-caret-down"></i>
@@ -106,7 +108,7 @@
         <div class="container-fluid">
           <div class="row header">
             <div class="col">
-              <h2>Electronics</h2>
+              <a class="category" target="_blank" routerLink="/products" [queryParams]="{category : 'electronics'}"><h2>Electronics </h2></a>
             </div>
           </div>
         
@@ -130,7 +132,7 @@
       </div> 
       </div>
     </div> 
-  
+  <!-- Home & furniture -->
   <div class="dropdown1">
         <button class="dropbtn">Home & Furniture 
           <i class="fa fa-caret-down"></i>
@@ -139,7 +141,8 @@
           <div class="container-fluid">
             <div class="row header">
               <div class="col">
-                <h2>Home & Furniture</h2>
+                <a class="category" target="_blank" routerLink="/products" [queryParams]="{category : 'furniture'}"><h2>Home & Furniture </h2></a>
+
               </div>
             </div>
           
@@ -163,7 +166,7 @@
         </div> 
         </div>
     </div> 
-  
+  <!-- TV and Appliances -->
   <div class="dropdown1">
         <button class="dropbtn">TV & Appliances 
           <i class="fa fa-caret-down"></i>
@@ -172,7 +175,8 @@
           <div class="container-fluid">
             <div class="row header">
               <div class="col">
-                <h2>TV & Appliances</h2>
+                <a class="category" target="_blank" routerLink="/products" [queryParams]="{category : 'tvappliances'}"><h2>TV & Appliances </h2></a>
+
               </div>
             </div>
           
@@ -196,7 +200,7 @@
         </div> 
         </div>
     </div>   
-  
+  <!-- Sports -->
   <div class="dropdown1">
         <button class="dropbtn">Sports 
           <i class="fa fa-caret-down"></i>
@@ -205,7 +209,7 @@
           <div class="container-fluid">
             <div class="row header">
               <div class="col">
-                <h2>Sports</h2>
+                <a class="category" target="_blank" routerLink="/products" [queryParams]="{category : 'sports'}"><h2>Sports </h2></a>
               </div>
             </div>
           

@@ -29,7 +29,7 @@ export const PRODS:Products[]=[
         description:"NULL",
         stock:0,
         imageurl:["assets/img/products/note9_1.jpeg"],
-        category:"MOBILES"
+        category:"ELECTRONICS"
     },
 
 
@@ -40,7 +40,7 @@ export const PRODS:Products[]=[
         description:"NULL",
         stock:0,
         imageurl:["assets/img/products/pocof1.jpeg"],
-        category:"MOBILES"
+        category:"ELECTRONICS"
     },
 
     {
@@ -91,7 +91,36 @@ export const PRODS:Products[]=[
         description:"The preferred choice of a vast range of acclaimed DJs. Punchy, bass-focused sound and high isolation. Sturdy headband and on-ear cushions suitable for live performance",
         stock:5,
         imageurl:["assets/img/products/red.png","assets/img/products/blue.png","assets/img/products/black.png"],
-        category:"HEADPHONES"
-    }
+        category:"ELECTRONICS"
+    },
 
+    {    
+        id: 10,
+        name:"4K UHD TV ",
+        price:155500,
+        description:"SONY BRAVIA 55 inches Black color",
+        stock:5,
+        imageurl:["assets/img/tvproduct.jpg"],
+        category:"ELECTRONICS"
+    },
+
+    {    
+        id: 11,
+        name:"Apple Watch Series 3 GPS  ",
+        price:25000,
+        description:"42 mm Space Grey Aluminium Case with Grey Sport Band (Grey Strap Regular)",
+        stock:5,
+        imageurl:["assets/img/apple2.jpg"],
+        category:"ELECTRONICS"
+    },
+    
+    {    
+        id: 12,
+        name:"Hp Au-111-tx",
+        price:65000,
+        description:"Its integrated with most powerfull Cpu and Hardware.",
+        stock:5,
+        imageurl:["assets/img/laptop-1.jpg"],
+        category:"ELECTRONICS"
+    },
 ]

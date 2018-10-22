@@ -1,8 +1,4 @@
-# To install it in your machine run  $npm install
-It is Ecommerce Website Template made with the help of Angular Framework.
-Its under Development.
-
-# Goshop E-commerce Website.
+# Goshop2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
 

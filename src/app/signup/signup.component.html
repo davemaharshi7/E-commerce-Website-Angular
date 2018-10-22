@@ -18,17 +18,17 @@
   
       </div>
    
-    <input type="password" class="form-control" name="password" placeholder="Password" required=""/>  
-    <div class="alert alert-danger" *ngIf="n.touched && !n.valid">
+    <input type="password" ngModel #p="ngModel" class="form-control" name="password" placeholder="Password" required/>  
+    <div class="alert alert-danger" *ngIf="p.touched && !p.valid">
 
-        <div *ngIf="n.errors.required">Password Required</div>
+        <div *ngIf="p.errors.required">Password Required</div>
        
       </div>
    
-    <input type="password" class="form-control" name="cpassword" placeholder="Confirm Password" required=""/>      
-    <div class="alert alert-danger" *ngIf="n.touched && !n.valid">
+    <input type="password" class="form-control" ngModel #cp="ngModel" name="cpassword" placeholder="Confirm Password" required/>      
+    <div class="alert alert-danger" *ngIf="cp.touched && !cp.valid">
 
-        <div *ngIf="n.errors.required">Password Required</div>
+        <div *ngIf="cp.errors.required">Confirm Password Required</div>
       
       </div>
    
