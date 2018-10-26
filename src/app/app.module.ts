@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     SingleProductComponent,
     FooterComponent,
     ContactusComponent,
-    AboutusComponent
+    AboutusComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +43,9 @@ import { AboutusComponent } from './aboutus/aboutus.component';
       {path:'product/:id',component:SingleProductComponent},
       {path:'signup',component:SignupComponent},
       {path:'contactus',component:ContactusComponent},
-      {path:'about',component:AboutusComponent}
+      {path:'about',component:AboutusComponent},
+      {path:'**',component:PageNotFoundComponent}
+
 
     ])
     

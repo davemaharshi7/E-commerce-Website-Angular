@@ -15,7 +15,9 @@
   <div class="col-lg-8 ">
       <form class="form-inline text-center">
           <div class="input-group collapse navbar-collapse " id="navbarSupportedContent">
+            <a routerLink="/products">
             <button class="btn btn-outline-dark" type="button" id="button-addon2"><i class="fa fa-search"></i></button>  
+          </a>
             <input type="text" class="form-control search_input" type="search" placeholder="Search" aria-label="Search Field" aria-describedby="button-addon2">
               
           </div> 
@@ -45,8 +47,8 @@
                     <div ngbDropdownMenu  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" routerLink="/contactus">Contact Us</a>
                       <a class="dropdown-item" routerLink="/about">About Us</a>
-                      <a class="dropdown-item" href="#">Advertise</a>
-                      <a class="dropdown-item" href="#">Customer Support</a>
+                      <a class="dropdown-item" href="/advertise">Advertise</a>
+                      <a class="dropdown-item" href="/support">Customer Support</a>
     
                     </div>
                   </li>
