@@ -22,9 +22,9 @@
     </p>
     <div class="row">
       <ng-container *ngFor="let p of filterd;let i = index">
-        <div class="col">
-          <div class="card" style="width: 18rem;  ">
-           <a routerLink="/product/{{p.id}}"><img class="card-img-top" [src]="p.imageurl[0]" class="img-thumbnail" height="450px" alt="Card image cap"></a>
+        <div class="col-sm-4">
+          <div class="card" style="width:270px  ">
+           <a routerLink="/product/{{p.id}}"><img class="card-img-top" [src]="p.imageurl[0]" class="img-thumbnail img-responsive"  alt="Card image cap"></a>
             <div class="card-body">
               <h5 class="card-title"><a routerLink="/product/{{p.id}}">{{ p.name }}</a></h5>
               <p class="card-text">{{ p.price | currency:'INR':true }} 
@@ -32,11 +32,11 @@
                   <span *ngIf="p.stock==0" class="badge badge-danger">Out of Stock</span>
     
               </p>
-              <a href="#" class="btn btn-success" [class.disabled]="p.stock==0">Add To Cart</a>
+              <a href="/product/{{p.id}}" class="btn btn-success" [class.disabled]="p.stock==0">Add To Cart</a>
             </div>
           </div>
         </div>
-        <div *ngIf="(i+1)%2===0" class="w-100" ><br></div>
+        <div *ngIf="(i+1)%3===0" class="w-100" ><br></div>
       </ng-container>
       <div *ngIf="filterd.length == 0">
         <p>Sorry, NO PRODUCTS FOUND!!</p>
@@ -45,4 +45,5 @@
   </div>
 </div>
 </div>
+
 <go-footer></go-footer>

@@ -24,8 +24,9 @@ ul.thumb li a {
 }
 
 /* for Background */
-.ad_cover{
+.ad_cover{ 
     background:  #ccffff  ;
+    background: linear-gradient(#fff,#ccffff);
  
  }
 
