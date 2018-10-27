@@ -1,16 +1,16 @@
 # Goshop
 
-#Features
-  1.Home page 
-  2.Login and Signup with Validation
-  3.Products page with Searching Facility
-  4.Single Product Page for particular selected product showing its all details
-  5.Viewing Proctucts in category wise from Navbar
-  6.Scroll up button
-  7.404 Error page for wrong URL
-  8.Custom Loader gif while page fully loads
-  9.About US page 
-  10.Contact us page
+## Features
+  1. Home page<br /> 
+  2. Login and Signup with Validation<br />
+  3. Products page with Searching Facility<br />
+  4. Single Product Page for particular selected product showing its all details<br />
+  5. Viewing Proctucts in category wise from Navbar<br />
+  6. Scroll up button<br />
+  7. 404 Error page for wrong URL<br />
+  8. Custom Loader gif while page fully loads<br />
+  9. About US page <br />
+  10. Contact us page<br />
   
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
