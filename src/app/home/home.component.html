@@ -95,13 +95,19 @@
   <div class=" ad_cover_buttons ">
       <div class="container overlay">
       <div class="mensbutton">
+          <a class="category" target="_blank" routerLink="/products" [queryParams]="{category : 'clothingm'}">
         <button class="btn btn-dark btn-lg img_btn">SHOP MEN's</button>
+            </a>
       </div>  
       <div class="womensbutton">
-        <button class="btn btn-dark btn-lg img_btn">SHOP Accesories</button>
+          <a class="category" target="_blank" routerLink="/products" [queryParams]="{category : 'accessories'}">        
+            <button class="btn btn-dark btn-lg img_btn">SHOP Accesories</button>
+          </a>
       </div>  
       <div class="accsbutton">
-        <button class="btn btn-dark btn-lg img_btn">SHOP Women's</button>
+        <a class="category" target="_blank" routerLink="/products" [queryParams]="{category : 'clothingf'}">
+            <button class="btn btn-dark btn-lg img_btn">SHOP Women's</button>
+        </a>
       </div>  
   </div>
 </div>
